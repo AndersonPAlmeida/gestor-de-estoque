@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-500: #3F3B3B;
+  --black-700: #1B191C; 
+  --white-500: #FFFEFE;
+  font-size: 62.5%;
+}
+
+body {
+  padding: 2rem;
+  background-color: var(--black-500);
+  color: var(--white-500);
+  font-size: 1.4rem;
+}
+
+li {
+  list-style: none;
+}

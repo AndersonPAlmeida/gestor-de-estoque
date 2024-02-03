@@ -1,0 +1,17 @@
+.containerHome {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.generalDataContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.listContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
