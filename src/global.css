@@ -8,16 +8,25 @@
   --black-500: #3F3B3B;
   --black-700: #1B191C; 
   --white-500: #FFFEFE;
+  --blue-500: #5BA7FD;
+  --red-500: #FF5258;
   font-size: 62.5%;
 }
 
 body {
   padding: 2rem;
   background-color: var(--black-500);
+}
+
+body, input, select, textarea, a, button{
   color: var(--white-500);
   font-size: 1.4rem;
 }
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
