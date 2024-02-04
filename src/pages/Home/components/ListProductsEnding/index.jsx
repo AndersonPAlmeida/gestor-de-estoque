@@ -1,3 +1,4 @@
+import { Button } from '../../../../components/Button'
 import styles from './ListProductsEnding.module.css'
 
 export function ListProductsEnding(){
@@ -11,7 +12,7 @@ export function ListProductsEnding(){
       <div className={styles.list}>
         <p>7 Wonders</p>
         <p>8</p>
-        <button className={styles.link}>Ver</button>
+        <Button text="Ver"/>
       </div>
     </div>
   )

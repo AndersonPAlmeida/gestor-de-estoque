@@ -1,3 +1,4 @@
+import { Button } from '../../../../components/Button'
 import styles from './ListProductsRecent.module.css'
 
 export function ListProductsRecent(){
@@ -9,11 +10,11 @@ export function ListProductsRecent(){
       </div>
       <div className={styles.list}>
         <p>7 Wonders</p>
-        <button className={styles.link}>Ver</button>
+        <Button text="Ver"/>
       </div>
       <div className={styles.list}>
         <p>7 Wonders</p>
-        <button className={styles.link}>Ver</button>
+        <Button text="Ver"/>
       </div>
     </div>
   )

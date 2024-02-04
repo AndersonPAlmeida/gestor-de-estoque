@@ -5,8 +5,8 @@ import { ItemInStock } from './pages/ItemInStock';
 export function App() {
   return (
     <>
-      {/* <Home/> */}
-      <ItemInStock />
+      <Home/>
+      {/* <ItemInStock /> */}
     </>
   )
 }
