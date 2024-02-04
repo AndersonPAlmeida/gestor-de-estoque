@@ -1,0 +1,42 @@
+.containerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.links ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons, .operations {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.operations {
+  gap: 2rem;
+}
+
+.descriptionsStock {
+  display: flex;
+  gap: 2rem;
+}
+
+.descriptionsStock div {
+  background-color: var(--black-700);
+  padding: 1rem 2rem;
+}
+
+.descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.descriptions div:last-child {
+  display: flex;
+  gap: 2rem;
+}
