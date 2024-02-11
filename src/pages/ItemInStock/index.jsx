@@ -1,7 +1,10 @@
 import { Button } from '../../components/Button'
 import styles from './ItemInStock.module.css'
+import { useStock } from '../../hooks/useStock'
 
 export function ItemInStock() {
+  const { items } = useStock()
+
   return (
     <div>
       <div className={styles.titles}>
@@ -12,18 +15,22 @@ export function ItemInStock() {
         <h3>Ações</h3>
       </div>
 
-      <div className={styles.content}>
-        <p>Loremipsum,dolorsitamet</p>
-        <p>7 Wonders</p>
-        <p>8 unid</p>
-        <p>Jogos</p>
+      {
+          items.map((item) => {
+            <div className={styles.content} key={item.id}>
+              <p>{item.id}</p>
+              <p>{item.name}</p>
+              <p>{item.quantity}</p>
+              <p>{item.category}</p>
+              <div className={styles.buttons}>
+                <Button text="Ver" typeColor="primary"/>
+                <Button text="Atualizar" />
+                <Button text="Excluir" typeColor="danger"/>
+              </div>
+            </div>
+          })
+        }
 
-        <div className={styles.buttons}>
-          <Button text="Ver" typeColor="primary"/>
-          <Button text="Atualizar" />
-          <Button text="Excluir" typeColor="danger"/>
-        </div>
-      </div>
     </div>
   )
 }
