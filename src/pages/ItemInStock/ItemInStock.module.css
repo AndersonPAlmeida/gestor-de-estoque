@@ -4,13 +4,14 @@
   gap: 2rem;
 }
 
-.links ul{
+.links ul {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.titles, .content {
+.titles,
+.content {
   padding: 1rem;
   display: grid;
   grid-template-columns: 2fr repeat(3, 1fr) 3fr;

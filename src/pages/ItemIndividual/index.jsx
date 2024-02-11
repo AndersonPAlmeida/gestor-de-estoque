@@ -3,22 +3,7 @@ import styles from './ItemIndividual.module.css'
 
 export function ItemIndividual() {
   return (
-    <div className={styles.containerItem}>
-      <h1>Stock Items</h1>
-
-      <nav className={styles.links}>
-        <ul>
-          <li>
-            <a href="#">Todos os itens</a>
-          </li>
-          <li>
-            <a href="#">Novo Item</a>
-          </li>
-        </ul>
-      </nav>
-
-      <hr />
-
+    <div>
       <div className={styles.operations}>
         <p>7 Wonders</p>
         
@@ -41,7 +26,6 @@ export function ItemIndividual() {
           <span>Atualizado em: Fri Jun 16 2023</span>
         </div>
       </div>
-
     </div>
   )
 }
