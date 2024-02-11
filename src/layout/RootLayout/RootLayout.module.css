@@ -1,0 +1,28 @@
+.rootLayoutContainer {
+  min-height: 100vh;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-rows: 5rem 1fr 3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
