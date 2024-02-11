@@ -18,6 +18,7 @@ export function ItemInStock() {
       </nav>
 
       <hr />
+      
       <div>
         <div className={styles.titles}>
           <h3>ID</h3>

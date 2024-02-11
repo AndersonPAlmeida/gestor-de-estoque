@@ -1,0 +1,47 @@
+.containerNewItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.links ul{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 10rem;
+}
+
+.sectionOne {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-wrapper, .inputItem {
+  width: 100%;
+}
+
+.inputItem, .textItem {
+  background-color: var(--black-700);
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.textItem {
+  height: 12rem;
+  resize: none;
+}
