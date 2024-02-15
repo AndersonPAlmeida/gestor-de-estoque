@@ -16,20 +16,19 @@ export function ItemInStock() {
       </div>
 
       {
-          items.map((item) => {
-            <div className={styles.content} key={item.id}>
-              <p>{item.id}</p>
-              <p>{item.name}</p>
-              <p>{item.quantity}</p>
-              <p>{item.category}</p>
-              <div className={styles.buttons}>
-                <Button text="Ver" typeColor="primary"/>
-                <Button text="Atualizar" />
-                <Button text="Excluir" typeColor="danger"/>
+          items.map((item) => (
+              <div className={styles.content} key={item.id}>
+                <p>{item.id}</p>
+                <p>{item.name}</p>
+                <p>{item.quantity}</p>
+                <p>{item.category}</p>
+                <div className={styles.buttons}>
+                  <Button text="Ver" typeColor="primary"/>
+                  <Button text="Atualizar" />
+                  <Button text="Excluir" typeColor="danger"/>
+                </div>
               </div>
-            </div>
-          })
-        }
+          ))}
 
     </div>
   )
