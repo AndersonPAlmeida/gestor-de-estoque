@@ -6,9 +6,10 @@ Button.propTypes = {
   typeColor: PropTypes.string
 }
 
-export function Button({text, typeColor=""}) {
+export function Button({text, typeColor="", ...rest}) {
+
   return (
-    <button className={`${styles.button} ${[styles[typeColor]]}`}>
+    <button className={`${styles.button} ${[styles[typeColor]]}`} {...rest}>
       {text}
     </button>
   )

@@ -1,9 +1,16 @@
 import { Button } from '../../components/Button'
+import { TagLink } from '../../components/Link'
 import styles from './ItemInStock.module.css'
 import { useStock } from '../../hooks/useStock'
 
 export function ItemInStock() {
-  const { items } = useStock()
+  const { items, deleteItem } = useStock()
+
+  function handleDelete(name, idItem){
+    if (confirm(`Tem certeza que deseja excluir o item ${name} ?`)) {
+      deleteItem(idItem)
+    }
+  }
 
   return (
     <div>
@@ -23,9 +30,12 @@ export function ItemInStock() {
                 <p>{item.quantity}</p>
                 <p>{item.category}</p>
                 <div className={styles.buttons}>
-                  <Button text="Ver" typeColor="primary"/>
-                  <Button text="Atualizar" />
-                  <Button text="Excluir" typeColor="danger"/>
+
+                  <TagLink text="Ver" typeColor="primary" 
+                  linkRedirect={`/items/${item.id}`} />
+                  <TagLink text="Atualizar" linkRedirect={`/items/${item.id}/update`} />
+                              
+                  <Button text="Excluir" typeColor="danger" name={item.name} onClick={() => handleDelete(item.name, item.id)}/>
                 </div>
               </div>
           ))}
