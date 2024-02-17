@@ -1,7 +1,12 @@
-import { Button } from '../../../../components/Button'
 import styles from './ListProductsEnding.module.css'
+import { TagLink } from '../../../../components/Link'
+import PropTypes from 'prop-types'
 
-export function ListProductsEnding(){
+ListProductsEnding.propTypes = {
+  items: PropTypes.array
+}
+
+export function ListProductsEnding({items}){
   return (
     <div className="containerList">
       <div className={styles.titles}>
@@ -9,11 +14,15 @@ export function ListProductsEnding(){
         <h3>Qtd.</h3>
         <h3>Ações</h3>
       </div>
-      <div className={styles.list}>
-        <p>7 Wonders</p>
-        <p>8</p>
-        <Button text="Ver"/>
-      </div>
+      {
+        items.map((item) => (
+          <div key={item.id} className={styles.list}>
+            <p>{item.name}</p>
+            <p>{item.quantity}</p>
+            <TagLink text="Ver" linkRedirect={`/items/${item.id}`} />
+          </div>
+        ))
+      }
     </div>
   )
 }

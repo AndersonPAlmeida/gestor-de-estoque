@@ -1,11 +1,17 @@
 import styles from './ScreenData.module.css'
+import PropTypes from 'prop-types'
 
-export function ScreenData() {
+ScreenData.propTypes = {
+  title: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired
+}
+
+export function ScreenData({title, value}) {
   return (
     <div className={styles.container}>
-      <p>Diversidade de itens</p>
+      <p>{title}</p>
       <div className={styles.quantity}>
-        <strong>2</strong>
+        <strong>{value}</strong>
       </div>
     </div>
   )
