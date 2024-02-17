@@ -4,13 +4,7 @@ import styles from './ItemInStock.module.css'
 import { useStock } from '../../hooks/useStock'
 
 export function ItemInStock() {
-  const { items, deleteItem } = useStock()
-
-  function handleDelete(name, idItem){
-    if (confirm(`Tem certeza que deseja excluir o item ${name} ?`)) {
-      deleteItem(idItem)
-    }
-  }
+  const { items } = useStock()
 
   return (
     <div>
@@ -23,22 +17,23 @@ export function ItemInStock() {
       </div>
 
       {
-          items.map((item) => (
-              <div className={styles.content} key={item.id}>
-                <p>{item.id}</p>
-                <p>{item.name}</p>
-                <p>{item.quantity}</p>
-                <p>{item.category}</p>
-                <div className={styles.buttons}>
+        items.map((item) => (
+            <div className={styles.content} key={item.id}>
+              <p>{item.id}</p>
+              <p>{item.name}</p>
+              <p>{item.quantity}</p>
+              <p>{item.category}</p>
+              <div className={styles.buttons}>
 
-                  <TagLink text="Ver" typeColor="primary" 
-                  linkRedirect={`/items/${item.id}`} />
-                  <TagLink text="Atualizar" linkRedirect={`/items/${item.id}/update`} />
-                              
-                  <Button text="Excluir" typeColor="danger" name={item.name} onClick={() => handleDelete(item.name, item.id)}/>
-                </div>
+                <TagLink text="Ver" typeColor="primary" 
+                linkRedirect={`/items/${item.id}`} />
+                <TagLink text="Atualizar" linkRedirect={`/items/${item.id}/update`} />
+                            
+                <Button text="Excluir" typeColor="danger" name={item.name} idItem={`${item.id}`}/>
               </div>
-          ))}
+            </div>
+        ))
+      }
 
     </div>
   )

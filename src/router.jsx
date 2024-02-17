@@ -18,8 +18,8 @@ export const router = createBrowserRouter([{
       children: [
         { index: true, element: <ItemInStock /> },
         { path: "new", element: <NewItem /> },
-        // { path: "/:id", element: <ItemIndividual /> },
-        // { path: "/:id/update", element: <UpdateItem /> },
+        { path: ":id", element: <ItemIndividual /> },
+        { path: ":id/update", element: <UpdateItem /> },
       ]
     }
   ]

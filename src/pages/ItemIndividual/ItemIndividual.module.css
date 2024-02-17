@@ -9,6 +9,7 @@
 }
 
 .descriptionsStock {
+  margin-block: 2rem;
   display: flex;
   gap: 2rem;
 }

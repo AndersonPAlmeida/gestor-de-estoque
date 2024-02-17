@@ -33,16 +33,34 @@ export function StockContextProvider({ children }) {
 
   function deleteItem(itemId) {
     setItems(currentState => {
-      const updateItems = currentState.filter(item => item.id !== itemId)
+      const updateItems = currentState.filter(item => item.id !== +itemId)
       localStorage.setItem('obv-react-stock', JSON.stringify(updateItems))
 
       return updateItems
     })
   }
 
+  function updateItems(itemId, newAtrributes) {
+    setItems(currentState => {
+      const itemIndex = currentState.findIndex(item => item.id === +itemId)
+      const updateItems = [...currentState]
+
+      Object.assign(updateItems[itemIndex], newAtrributes, { updateAt: new Date() }),
+      localStorage.setItem('obv-react-stock', JSON.stringify(updateItems))
+
+      return updateItems
+    })  
+  }
+
+  function getItem(itemId) {
+    return items.find(item => item.id === +itemId)
+  }
+
   const stock = {
     items,
     addItem,
+    getItem,
+    updateItems,
     deleteItem
   }
 
